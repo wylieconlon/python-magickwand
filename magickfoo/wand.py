@@ -6,7 +6,6 @@ PIXELS_PER_INCH = api.PixelsPerInchResolution
 PIXELS_PER_CENTIMETER = api.PixelsPerCentimeterResolution
 
 # Image filters
-BESSEL_FILTER = api.BesselFilter
 BLACKMAN_FILTER = api.BlackmanFilter
 BOX_FILTER = api.BoxFilter
 CATROM_FILTER = api.CatromFilter
@@ -71,20 +70,7 @@ BZIP_COMPRESSION = api.BZipCompression
 LZW_COMPRESSION = api.LZWCompression
 ZIP_COMPRESSION = api.ZipCompression
 
-# Composite operations
-MINUS_COMPOSITE_OP = api.MinusCompositeOp
-ADD_COMPOSITE_OP = api.AddCompositeOp
-IN_COMPOSITE_OP = api.InCompositeOp
-DIFFERENCE_COMPOSITE_OP = api.DifferenceCompositeOp
-PLUS_COMPOSITE_OP = api.PlusCompositeOp
-BUMPMAP_COMPOSITE_OP = api.BumpmapCompositeOp
-ATOP_COMPOSITE_OP = api.AtopCompositeOp
-XOR_COMPOSITE_OP = api.XorCompositeOp
-SUBTRACT_COMPOSITE_OP = api.SubtractCompositeOp
-OUT_COMPOSITE_OP = api.OutCompositeOp
-COPY_COMPOSITE_OP = api.CopyCompositeOp
-DISPLACE_COMPOSITE_OP = api.DisplaceCompositeOp
-OVER_COMPOSITE_OP = api.OverCompositeOp
+# Composite operations have been renamed since 3
 
 # Evaluate operators
 MAX_OPERATOR = api.MaxEvaluateOperator

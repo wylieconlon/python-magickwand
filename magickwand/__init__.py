@@ -7,21 +7,24 @@ wand_lib = find_library('MagickWand')
 if not wand_lib:
     raise ImportError('MagickWand library cannot be found.')
 
-if wand_lib in ['libMagickWand.so.1']:
+if wand_lib.find('libMagickWand.so.1') != -1:
     raise ImportError('API level 1 was not implemented, please file a bug')
     wand_version = 1
     from magickwand1 import *
-elif wand_lib in ['libMagickWand.so.2']:
+elif wand_lib.find('libMagickWand.so.2') != -1:
     raise ImportError('API level 2 was not implemented, please file a bug')
     wand_version = 2
     from magickwand2 import *
-elif wand_lib in ['libMagickWand.so.3']:
+elif wand_lib.find('libMagickWand.so.3') != -1:
     wand_version = 3
     from magickwand3 import *
-elif wand_lib in ['libMagickWand.so.4']:
+elif wand_lib.find('libMagickWand.so.4') != -1:
     wand_version = 4
     from magickwand4 import *
-elif wand_lib in ['libMagickWand.so.5']:
+elif wand_lib.find('libMagickWand.so.5') != -1:
+    wand_version = 5
+    from magickwand5 import *
+elif wand_lib.find('libMagickWand.dylib') != -1:
     wand_version = 5
     from magickwand5 import *
 else:
